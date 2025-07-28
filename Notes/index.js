@@ -1,3 +1,4 @@
+// VARIABLES
 //variables is like a container or storage that holds data
 //there are 2 types of variables "let" and "const"
 //let allows you to define a variable that can be reassigned a new value or the variable valus can be changed once initiated
@@ -11,6 +12,7 @@
 // console.log(a);
 // console.log(b);
 
+// DATA TYPES
 //Data types describe the kind of data or value a variable holds. i.e is it text,numbers,true/false statement, a list of things e.t.c
 // 2 main types of data types 
 // Primitive data type - a simple, single values e.g string,numbers,bolean,null,undefined,symbol e.t.c
@@ -42,6 +44,7 @@
 // console.log(typeof true);
 // console.log(typeof fruits);
 
+// ARITHMETIC OPERATOR
 // Arithmetic Opertors are symbols that let you do basic math opertaions in javascript
 // They are addition(+), subtraction(-), multiplication(*), division(/), modulus(remainder (%)), exponentiation(raise to power(**), increment(add 1 (++)), decrement(subtract 1 (--))
 
@@ -67,6 +70,7 @@
 // console.log("Each person gets:", applePerPerson);
 // console.log("Apples left:", remainingApples);
 
+// CONDITIONS
 // if, else if, and else statement.....An if statement lets the code make decisions.
 // i.e if this is true, do this.Otherwise, do something else
 //  Basic structure
@@ -105,6 +109,7 @@
 //     console.log("Fail");
     
 // }
+
 // // javascript prompt() is a function that pops up a dialog box asking the user to input something. The input is always stored as text (a string) but you can convert it to number if needed.
 
 // let userName = prompt("What is your name?");
@@ -124,6 +129,7 @@
 //     document.getElementById("myH1").textContent = `Hello ${username}`     
 // }
 
+// TYPE CONVERION
 // Type conversion is the process of changing a datatype of a value to another (strings, numbers, boolean).
 // why might we want to type convert datatypes values?. in cases where we might want to accept user input and the datatype of that input is a string and we need to use it for any maths calculation we need it converted to a number. e.g lets say the user is 25
 
@@ -136,6 +142,7 @@
 // age += 1;
 // console.log(age); //this gave 26 because it was type converted using Number()
 
+// TERNARY OPERATOR
 // ternary operator is a shortcut to if and else statement which helps to assign a variable based on a condition e.g
 // let age = 25;
 // let message = age >= 18 ? "You are an adult": "You are a minor";
@@ -156,6 +163,7 @@
 // }
 // so ternary made it short to write the if and else statement
 
+// STRING METHOD
 // String method is a built in method that allows you to manipulate and work with strings.
 // common string method are 
 
@@ -205,6 +213,7 @@
 //     spoonful++;
 // } while (spoonful <= 3);
 
+// FUNCTIONS
 // function greetUser() {
 //     console.log("Hi Grace!");
     
@@ -234,6 +243,20 @@
 // addNumbers(2, 4);
 // addNumbers(6, 3);
 
+// CALLBACK
+// A callback is a function passed by as an argument to another function which is called later after an action is done.
 
+// E.g
+// function onConnected() {
+//     console.log("📞 call connected. Talking now....");  
+// }
 
+// function makeCall(callback) {
+//     console.log("Dailing....");
+    
+//     setTimeout(() => {
+//         callback(); 
+//     }, 2000);
+// }
 
+// makeCall(onConnected);
