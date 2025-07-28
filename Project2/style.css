@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%; 
     background: linear-gradient(to right, #ece9e6, #ffffff);
     padding: 60px 20px;
     color: #333;
@@ -17,9 +22,7 @@ body.dark-mode {
     color: #f1f1f1;
 }
 
-/* body.dark-mode img.dice {
-    filter: invert(1);
-} */
+
 
 #themeToggle {
     position: absolute;
@@ -31,17 +34,22 @@ body.dark-mode {
 }
 
 h1 {
-    font-size: 2.5rem;
+    /* font-size: ; */
     margin-bottom: 30px;
-    color: #2c3e50;
+    color: #38074e;
 }
 
 label {
-    font-size: 1.2rem;
+    /* font-size: ; */
     margin-right: 10px;
 }
 
 #container {
+    min-height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 2rem;
@@ -49,7 +57,9 @@ label {
 }
 
 button {
-    font-size: 1rem;
+    margin-top: auto;
+    align-self: center;
+    font-size: 2rem;
     padding: 10px 20px;
     border-radius: 6px; 
     border: none;
@@ -72,11 +82,14 @@ input {
     font-size: 2rem;
     width: 150px;
     text-align: center;
+    align-self: center;
+    margin-top: 30px;
     font-weight: 700;
     border: 1.5px solid;
 }
 
 input[type="number"] {
+    background: transparent;
     width: 60px;
     padding: 8px;
     border: 2px solid #ccc;
@@ -89,19 +102,22 @@ input[type="number"] {
     font-size: 1.3rem;
 }
 
+
+
 #diceImages {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 #diceImages img {
     color: inherit;
     fill: currentColor;
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin: 5px;
     transition: transform 0.3s ease;
     filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
