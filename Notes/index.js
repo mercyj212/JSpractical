@@ -260,3 +260,109 @@
 // }
 
 // makeCall(onConnected);
+
+// forEach()
+// This method is used to loop through all items in an array one by one and do something with each item.
+// syntax: away.forEach(function(item, index, array){
+    // do something with item
+// });
+// E.g 
+// let fruits = ["apple", "banana", "orange", "coconut"];
+// fruits.forEach(upperCase);
+// fruits.forEach(display);
+
+// function upperCase(element, index, array){
+//     array[index] = element.toUpperCase();
+// }
+
+// function display(element) {
+//     console.log(element);
+    
+// }
+
+// map()
+// This is a method used on arrays. It lets you loop through each items, transform it and return a new array with the results. it doesnt change the original array.
+
+// E.g
+// const numbers = [1, 2, 3, 4, 5];
+// const squares = numbers.map(square);
+
+// function square(element) {
+//     return Math.pow(element, 2)
+// }
+
+// console.log(squares);
+
+// filter()
+// The filter() method is used to loop through an array and keep only the items that meet a condition. it returns a new array with the items that passed the test.
+// E.g
+// let numbers = [1, 2, 3, 4, 5, 6, 7];
+// let evenNums = numbers.filter(isEven);
+
+// function isEven(element) {
+//     return element % 2 === 0;
+// }
+
+// console.log(evenNums);
+
+// reduce()
+// The reduce() method takes all the items in array and reduces them down to one single value.
+// E.g
+// const prices = [5, 30, 10, 25, 15, 20];
+// const total = prices.reduce(sum);
+
+// function sum(accumulator, element) {
+//     return accumulator + element;
+// }
+
+// console.log(`%${total.toFixed(2)}`);
+
+// TASKS
+// 1.You have an array of student names. Print a welcome message for each student (forEach()).
+// 2.You have an array of numbers. Keep only the even numbers.(filter())
+// 3.You have an array of product prices in dollars.Add a # symbol and return the prices in naira.(map())
+// 4.You have an array of expenses, find the total amount spent.(reduce())
+
+// Solution 1
+// const students = ["Peace", "Grace", "Rachel", "Solomon", "Corey"];
+//     // students.forEach(display);
+
+// function student(element, index, array) {
+//     console.log("Welcome", element);   
+// }
+
+
+// students.forEach(student);
+
+// Solution 2
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function evenNum(element) {
+//     return element % 2 === 0;
+// }
+
+// let evenNumbers = numbers.filter(evenNum);
+
+// console.log(evenNumbers);
+
+// Solution 3
+// const prices = [100, 200, 300, 400, 500];
+
+// function pricesInNaira(element) {
+//     return `#${element * 1500}`;
+// }
+
+// const nairaPrices = prices.map(pricesInNaira);
+
+// console.log(nairaPrices);
+
+// Solution 4
+const expenses = [1200, 3500, 2000, 1500];
+
+function sum(accumulator, element) {
+    return accumulator + element;
+}
+
+const totalAmount = expenses.reduce(sum);
+
+console.log(totalAmount);
