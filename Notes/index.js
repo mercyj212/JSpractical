@@ -356,13 +356,34 @@
 
 // console.log(nairaPrices);
 
-// Solution 4
-const expenses = [1200, 3500, 2000, 1500];
+// // Solution 4
+// const expenses = [1200, 3500, 2000, 1500];
 
-function sum(accumulator, element) {
-    return accumulator + element;
-}
+// function sum(accumulator, element) {
+//     return accumulator + element;
+// }
 
-const totalAmount = expenses.reduce(sum);
+// const totalAmount = expenses.reduce(sum);
 
-console.log(totalAmount);
+// console.log(totalAmount);
+
+// FUNCTION EXPRESSION
+// This is a way to define a function and assign it to a variable. Unlike function declarations, function expressions are not hoisted, that is they are only usable after the line where they are defined.
+// E.g 
+// const numbers = [1,2,3,4,5,6];
+//     const squares = numbers.map(function(element){
+//         return Math.pow(element, 2);  
+//     });
+    
+//     console.log(squares);
+    
+// ARROW FUNCTION
+// Arrow functions are a shorter way to write function expressions. They use the => syntax and are often used for simple functions.
+// E.g
+// const numbers = [1, 2, 3, 4, 5];
+// const squares = numbers.map((element) => Math.pow(element, 2));
+// console.log(squares);
+
+// OBJECT
+// An object is a collection of key-value pairs. You can think of it like a real-life object that has properties and behaviors. In JavaScript, objects are used to store data and functions together. You use it to group related data and functions(called methods when inside an object).
+// 
