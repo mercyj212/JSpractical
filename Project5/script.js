@@ -16,12 +16,26 @@ guessButton.addEventListener("click", function () {
 
     if(userGuess === randomNumber) {
         result.textContent = `🎉 Correct! The number was ${randomNumber}.`;
+        result.style.color = "green"
         guessButton.disabled = true;
         playAgainButton.style.display = "inline-block";
     } else if (userGuess < randomNumber) {
         result.textContent = "Too low! Try again.";
+        result.style.color = "red";
+        result.classList.add("show", "shake");
+
+        
+        setTimeout(() => {
+            result.classList.remove("shake")
+        }, 300);
     } else {
         result.textContent = "Too high! Try again.";
+        result.style.color = "red";
+        result.classList.add("show", "shake");
+
+        setTimeout(() => {
+            result.classList.remove("shake")
+        }, 300);
     }
 
     guessInput.value = "";  
@@ -31,6 +45,8 @@ guessButton.addEventListener("click", function () {
 playAgainButton.addEventListener("click", function () {
     randomNumber = Math.floor(Math.random() * 100) + 1;
     result.textContent = " ";
+    result.style.color = "#1d1d1d"
+    result.classList.remove("show");
     guessButton.disabled = false;
     playAgainButton.style.display = "none";
     guessInput.value = "";
@@ -42,4 +58,5 @@ guessInput.addEventListener("keyup", function(e) {
         guessButton.click();
     }
 });
-// Initial message
+
+result.classList.add("show");
