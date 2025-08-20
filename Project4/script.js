@@ -18,6 +18,12 @@ incrementBtn.addEventListener("click", () => {
 
 decrementBtn.addEventListener("click", () => {
     counterValue--;
+
+    if (counterValue < 0) {
+        alert("This cannot be decreased than 0");
+        counterValue = 0;                   // Prevent negative values
+    }
+
     lastUpdated = new Date().toLocaleString();
     updateDisplay();
 });

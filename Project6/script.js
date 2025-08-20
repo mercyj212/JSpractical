@@ -1,6 +1,7 @@
 const inputDisplay = document.querySelector(".input");
 const outputDisplay = document.querySelector(".output");
 const keys= document.querySelectorAll(".keys div");
+ 
 
 let currentInput = ""; //what user is typing
 let displayInput = ""; //what is displayed in the input field 
@@ -34,17 +35,47 @@ function handleKeyPress(key) {
         displayInput += "" + displaySymbol + ""; 
         inputDisplay.textContent =  displayInput;
     }
-    else if (key === "brackets") {
+
+      else if (key === "bracket") {
+      let bracketToggle = false; // Track if we are adding an opening or closing bracket
         if (bracketToggle) {
+            currentInput += ")";
+            displayInput += ")"; 
+      }
+        else {
             currentInput += "(";
-            displayInput += "(";
-        } else {
-        currentInput += key;
-        displayInput += key;
+            displayInput += "("; 
         }
         bracketToggle = !bracketToggle;
         inputDisplay.textContent = displayInput;
     }
+    
+    else if (key === "brackets") {
+      let bracketsToggle = false; // Track if we are adding an opening or closing bracket
+        if (bracketsToggle) {
+            currentInput += "(";
+            displayInput += "("; 
+      }
+        else {
+            currentInput += ")";
+            displayInput += ")";
+        }
+        bracketsToggle = !bracketsToggle;
+        inputDisplay.textContent = displayInput;
+    }
+    
+
+    //  else if( key === "brackets") {
+    //     if (bracketToggle) {
+    //         currentInput += "(";
+    //         displayInput += "(";
+    //     } else {
+    //     currentInput += key;
+    //     displayInput += key;
+    //     }
+    //     bracketToggle = !bracketToggle;
+    //     inputDisplay.textContent = displayInput;
+    // }
     else if (key === "=") {
         try {
             result = eval(currentInput);
